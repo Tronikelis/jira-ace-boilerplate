@@ -10,7 +10,7 @@ import { Client } from "pg";
 function query(query) {
     return new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === "development") {
-            
+            // change these to your local database
             const client = new Client({
                 host: "localhost",
                 port: 5432,

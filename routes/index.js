@@ -25,9 +25,5 @@ export default function routes(app, addon) {
         // expected output: [], if you have an empty table named 'main'
 
         return res.sendStatus(200);
-    })
-
-    app.get("/api", addon.checkValidToken(), (req, res) => {
-        return res.sendStatus(200);
     });
 };
