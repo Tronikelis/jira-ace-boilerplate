@@ -5,6 +5,7 @@
 
 <ul>
     <li>Change credentials.json to your info</li>
+    <li>set NODE_ENV=development</li>
     <li>Change database info to yours in db/index.js</li>
     <li>yarn install</li>
     <li>yarn start</li>
