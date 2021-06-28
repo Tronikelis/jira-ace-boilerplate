@@ -1,6 +1,6 @@
 # Jira ace app minimal boilerplate + postgreSQL for Heroku
 
-### This will make your add on automatically register and de-register
+### This will make your addon automatically register and de-register
 
 
 <ul>
