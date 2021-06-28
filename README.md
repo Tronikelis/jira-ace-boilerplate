@@ -1,10 +1,10 @@
-# Jira ace app minimal boilerplate
+# Jira ace app minimal boilerplate + postgreSQL
 
 ### This will make your add on automatically register and de-register
 
 <ul>
     <li>Change credentials.json to your info</li>
-    <li>set NODE_ENV=development</li>
-    <li>yarn install</>
+    <li>Change database info to yours in db/index.js</li>
+    <li>yarn install</li>
     <li>yarn start</li>
 </ul>
