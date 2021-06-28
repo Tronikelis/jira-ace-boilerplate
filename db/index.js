@@ -7,7 +7,8 @@ import { Client } from "pg";
  * {text: "SELECT * FROM X WHERE X = $1", values: [X]}
  * @param {any} query
  */
-function query(query) {
+
+export default function query(query) {
     return new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === "development") {
             // change these to your local database
@@ -49,5 +50,3 @@ function query(query) {
         }
     });
 };
-
-export { query };
