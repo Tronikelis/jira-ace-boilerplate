@@ -29,6 +29,7 @@ function query(query) {
             });
 
         } else {
+            // intended for heroku
             const client = new Client({
                 connectionString: process.env.DATABASE_URL,
                 ssl: {

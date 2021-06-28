@@ -22,7 +22,7 @@ export default function routes(app, addon) {
         console.log(
             await query("SELECT * FROM main")
         );
-        // expected output: [], if you have a table named 'main'
+        // expected output: [], if you have an empty table named 'main'
 
         return res.sendStatus(200);
     })
