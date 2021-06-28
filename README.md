@@ -4,6 +4,7 @@
 
 <ul>
     <li>Change credentials.json to your info</li>
-    <li>yarn install</li>
+    <li>set NODE_ENV=development</li>
+    <li>yarn install</>
     <li>yarn start</li>
 </ul>
