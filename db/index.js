@@ -2,6 +2,11 @@ import { Promise } from "bluebird";
 import { Client } from "pg";
 
 
+/**
+ * Just write sql here or make an object like this
+ * {text: "SELECT * FROM X WHERE X = $1", values: [X]}
+ * @param {any} query
+ */
 function query(query) {
     return new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === "development") {
