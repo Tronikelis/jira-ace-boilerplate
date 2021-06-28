@@ -1,6 +1,7 @@
-# Jira ace app minimal boilerplate + postgreSQL
+# Jira ace app minimal boilerplate + postgreSQL for Heroku
 
 ### This will make your add on automatically register and de-register
+
 
 <ul>
     <li>Change credentials.json to your info</li>
