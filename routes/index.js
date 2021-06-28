@@ -1,7 +1,7 @@
 import Express from "express";
 import ace from "atlassian-connect-express";
 
-import { query } from "../db";
+import query from "../db";
 
 /**
  * @param {Express.Application} app
