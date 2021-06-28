@@ -16,9 +16,12 @@ export default function routes(app, addon) {
     });
 
     app.get("/", async (req, res) => {
+        // ? check if your db works
         console.log(
             await query("SELECT * FROM main")
         );
+        // expected output: [], if you have a table named 'main'
+
         return res.sendStatus(200);
     })
 
