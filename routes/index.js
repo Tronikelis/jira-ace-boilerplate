@@ -1,4 +1,5 @@
 import Express from "express";
+import ace from "atlassian-connect-express";
 
 import { query } from "../db";
 
@@ -6,6 +7,7 @@ import { query } from "../db";
  * @param {Express.Application} app
  * @param {Express.Request} req
  * @param {Express.Response} res
+ * @param {ace.AddOn} addon
  */
 
 
@@ -25,4 +27,7 @@ export default function routes(app, addon) {
         return res.sendStatus(200);
     })
 
+    app.get("/api", addon.checkValidToken(), (req, res) => {
+        return res.sendStatus(200);
+    });
 };
