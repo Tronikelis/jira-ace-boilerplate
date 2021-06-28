@@ -1,3 +1,9 @@
-# Jira ACE app minimal boilerplate
+# Jira ace app minimal boilerplate
 
-## This is the minimal boilerplate to make the app register and de-register
+### This will make your add on automatically register and de-register
+
+<ul>
+    <li>Change credentials.json to your info</li>
+    <li>yarn install</li>
+    <li>yarn start</li>
+</ul>
