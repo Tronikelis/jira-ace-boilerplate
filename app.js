@@ -9,6 +9,9 @@ import morgan from 'morgan';
 // atlassian-connect-express also provides a middleware
 import ace from 'atlassian-connect-express';
 
+// view engine
+import handlebars from 'express-handlebars';
+
 // we also need a few stock Node modules
 import http from 'http';
 import os from 'os';
@@ -37,6 +40,10 @@ app.use(helmet.hsts({
 app.use(helmet.referrerPolicy({
     policy: ['origin']
 }));
+
+// set up view engine, handlebars
+app.set("view engine", "handlebars");
+app.engine("handlebars", handlebars);
 
 // include request parsers
 app.use(express.json());
