@@ -1,6 +1,6 @@
 import Express from "express";
 
-import { query } from "../db/index";
+import { query } from "../db";
 
 /**
  * @param {Express.Application} app
