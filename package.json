@@ -1,0 +1,29 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "private": true,
+  "externals": {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
+  "scripts": {
+    "start": "node -r esm app.js"
+  },
+  "dependencies": {
+    "atlassian-connect-express": "^7.2.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "errorhandler": "^1.5.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "nocache": "^3.0.1",
+    "sequelize": "^6.6.4"
+  },
+  "devDependencies": {
+    "ngrok": "^4.0.1",
+    "nodemon": "^2.0.7",
+    "sqlite3": "^5.0.2"
+  }
+}
