@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "start": "node -r esm app.js",
+        "start": "nodemon -r esm app.js",
         "production": "node -r esm app.js"
     },
     "dependencies": {
