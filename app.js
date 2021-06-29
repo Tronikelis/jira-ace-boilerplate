@@ -83,7 +83,9 @@ http.createServer(app).listen(port, () => {
         const fileName = "./atlassian-connect.json";
         const file = require(fileName);
         
+        // ! remember to change this to your production url in (config.json).production
         file.baseUrl = addon.config.localBaseUrl();
+
         fs.writeFile(fileName, JSON.stringify(file), (err) => {
             if (err) console.log(err);
             console.log("writing to file");
