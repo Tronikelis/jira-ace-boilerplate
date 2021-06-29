@@ -73,5 +73,9 @@ http.createServer(app).listen(port, () => {
     if (devEnv) addon.register();
     // ! somehow this is very important, if this was before the addon.register it would not register
     // jira does not like environment variables for some reason
-    dotenv.config();
+
+    // * if not in production
+    if (!process.env.NODE_ENV) {
+        dotenv.config();
+    };
 });
