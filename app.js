@@ -1,27 +1,27 @@
-import express from 'express';
+const express = require('express');
 
 // middleware
-import compression from 'compression';
-import cookieParser from 'cookie-parser';
-import errorHandler from 'errorhandler';
-import morgan from 'morgan';
+const compression = require('compression');
+const cookieParser = require('cookie-parser');
+const errorHandler = require('cookie-parser');
+const morgan = require('morgan');
 
 // atlassian-connect-express also provides a middleware
-import ace from 'atlassian-connect-express';
+const ace = require('atlassian-connect-express');
 
 // view engine
-import handlebars from 'express-handlebars';
+const handlebars = require('express-handlebars');
 
 // we also need a few stock Node modules
-import http from 'http';
-import os from 'os';
-import helmet from 'helmet';
-import nocache from 'nocache';
+const http = require('http');
+const os = require('os');
+const helmet = require('helmet');
+const nocache = require('nocache');
 
 // app routes
-import routes from './routes';
+const routes = require('./routes');
 
-import dotenv from "dotenv";
+const dotenv = require("dotenv");
 
 const app = express();
 const addon = ace(app);
@@ -70,12 +70,10 @@ routes(app, addon);
 http.createServer(app).listen(port, () => {
     console.log('App server running at http://' + os.hostname() + ':' + port);
 
-    if (devEnv) addon.register();
-    // ! somehow this is very important, if this was before the addon.register it would not register
-    // jira does not like environment variables for some reason
-
-    // * if not in production
-    if (!process.env.NODE_ENV) {
+    if (devEnv) {
+        addon.register();
+        // ! somehow this is very important, if this was before the addon.register it would not register
+        // jira does not like environment variables for some reason
         dotenv.config();
     };
 });

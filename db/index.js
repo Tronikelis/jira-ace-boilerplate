@@ -1,5 +1,5 @@
-import { Promise } from "bluebird";
-import { Client } from "pg";
+const { Promise } = require("bluebird");
+const { Client } = require("pg");
 
 
 /**
@@ -8,7 +8,7 @@ import { Client } from "pg";
  * @param {any} query
  */
 
-export default function query(query) {
+module.exports = function(query) {
     return new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === "development") {
             console.log("started")

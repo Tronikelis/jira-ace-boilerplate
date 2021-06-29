@@ -1,7 +1,7 @@
-import Express from "express";
-import ace from "atlassian-connect-express";
+const Express = require("express");
+const ace = require("atlassian-connect-express");
 
-import query from "../db";
+const postgres = require("../db");
 
 /**
  * @param {Express.Application} app
@@ -11,7 +11,7 @@ import query from "../db";
  */
 
 
-export default function routes(app, addon) {
+module.exports = function(app, addon) {
 
     app.get("atlassian-connect.json", async (req, res) => {
         return res.redirect('/atlassian-connect.json');
@@ -21,7 +21,7 @@ export default function routes(app, addon) {
         // ? check if your db works
        
         console.log(
-            await query("SELECT * FROM main")
+            await postgres("SELECT * FROM main")
             .catch(err => console.log(err))
         );
         // expected output: [], if you have an empty table named 'main'
