@@ -8,7 +8,7 @@ const postgres = require("../db");
  * @param {Express.Request} req
  * @param {Express.Response} res
  * @param {ace.AddOn} addon
- */
+*/
 
 
 module.exports = function(app, addon) {
