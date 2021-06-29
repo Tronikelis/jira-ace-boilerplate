@@ -11,6 +11,7 @@ import { Client } from "pg";
 export default function query(query) {
     return new Promise((resolve, reject) => {
         if (process.env.NODE_ENV === "development") {
+            console.log("started")
             // change these to your local database
             const client = new Client({
                 host: "localhost",

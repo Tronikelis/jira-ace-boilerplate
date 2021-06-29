@@ -21,6 +21,8 @@ import nocache from 'nocache';
 // app routes
 import routes from './routes';
 
+import dotenv from "dotenv";
+
 const app = express();
 const addon = ace(app);
 
@@ -69,4 +71,6 @@ http.createServer(app).listen(port, () => {
     console.log('App server running at http://' + os.hostname() + ':' + port);
 
     if (devEnv) addon.register();
+    // ! somehow this is very important, if this was before the addon.register it would not register 
+    dotenv.config();
 });

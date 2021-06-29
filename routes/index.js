@@ -19,8 +19,10 @@ export default function routes(app, addon) {
 
     app.get("/", async (req, res) => {
         // ? check if your db works
+       
         console.log(
             await query("SELECT * FROM main")
+            .catch(err => console.log(err))
         );
         // expected output: [], if you have an empty table named 'main'
 

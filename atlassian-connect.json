@@ -1,5 +1,5 @@
 {
-    "key": "my-app",
+    "key": "tronikel.progress",
     "name": "My app",
     "description": "My very first app",
     "baseUrl": "{{localBaseUrl}}",
