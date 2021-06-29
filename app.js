@@ -71,9 +71,23 @@ http.createServer(app).listen(port, () => {
     console.log('App server running at http://' + os.hostname() + ':' + port);
 
     if (devEnv) {
-        addon.register();
+        addon.register()
         // ! somehow this is very important, if this was before the addon.register it would not register
         // jira does not like environment variables for some reason
         dotenv.config();
+    } else {
+        // change the json to the url of the server
+        // if it is in production
+        const fs = require("fs");
+
+        const fileName = "./atlassian-connect.json";
+        const file = require(fileName);
+        
+        file.baseUrl = addon.config.localBaseUrl();
+        fs.writeFile(fileName, JSON.stringify(file), (err) => {
+            if (err) console.log(err);
+            console.log("writing to file");
+            // console.log(JSON.stringify(file));
+        });
     };
 });
