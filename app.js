@@ -75,7 +75,7 @@ http.createServer(app).listen(port, () => {
     // jira does not like environment variables for some reason
 
     // * if not in production
-    if (!process.env.NODE_ENV) {
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
         dotenv.config();
     };
 });
