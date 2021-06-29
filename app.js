@@ -3,7 +3,7 @@ const express = require('express');
 // middleware
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
-const errorHandler = require('cookie-parser');
+const errorHandler = require('errorhandler');
 const morgan = require('morgan');
 
 // atlassian-connect-express also provides a middleware
