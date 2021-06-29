@@ -71,6 +71,7 @@ http.createServer(app).listen(port, () => {
     console.log('App server running at http://' + os.hostname() + ':' + port);
 
     if (devEnv) addon.register();
-    // ! somehow this is very important, if this was before the addon.register it would not register 
+    // ! somehow this is very important, if this was before the addon.register it would not register
+    // jira does not like environment variables for some reason
     dotenv.config();
 });
